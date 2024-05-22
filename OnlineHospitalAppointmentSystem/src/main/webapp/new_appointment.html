@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register New Appointment</title>
+</head>
+<body>
+	<h1>Register New Appointment</h1>
+	<form method='POST' action='schedule_appointment'>
+		<table style="background-color: lightgrey; margin: auto">
+			<tr>
+				<td><label for='patientId'>Patient ID:</label></td>
+				<td><input type='number' id='patientId' name='patientId'
+					required></td>
+			</tr>
+			<tr>
+				<td><label for='doctorId'>Doctor ID:</label></td>
+				<td><input type='number' id='doctorId' name='doctorId' required></td>
+			</tr>
+			<tr>
+				<td><label for='appointmentDate'>Appointment Date:</label></td>
+				<td><input type='date' id='appointmentDate'
+					name='appointmentDate' required></td>
+			</tr>
+			<tr>
+				<td><label for='appointmentTime'>Appointment Time:</label></td>
+				<td><input type='time' id='appointmentTime'
+					name='appointmentTime' required></td>
+			</tr>
+			<tr>
+				<td><label for='durationMinutes'>Duration (minutes):</label></td>
+				<td><select id='durationMinutes' name='durationMinutes'
+					required>
+						<option value=30>30</option>
+						<option value=45>45</option>
+						<option value=60>60</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type='text' id='status' name='status'
+					value='SCHEDULED' required></td>
+				<td><input type='submit' value='Schedule Appointment'></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
