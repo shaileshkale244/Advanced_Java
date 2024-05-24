@@ -1,0 +1,70 @@
+package com.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+// id | name    | party    | votes
+@Entity
+@Table(name = "candidates")
+public class Candidate {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Integer candidateId;
+
+	@Column(name = "name")
+	private String candidateName;
+
+	@Column(name = "party")
+	private String party;
+
+	@Column(name = "votes")
+	private Integer votes;
+
+	public Candidate() {
+
+	}
+
+	public Integer getCandidateId() {
+		return candidateId;
+	}
+
+	public void setCandidateId(Integer candidateId) {
+		this.candidateId = candidateId;
+	}
+
+	public String getCandidateName() {
+		return candidateName;
+	}
+
+	public void setCandidateName(String candidateName) {
+		this.candidateName = candidateName;
+	}
+
+	public String getParty() {
+		return party;
+	}
+
+	public void setParty(String party) {
+		this.party = party;
+	}
+
+	public Integer getVotes() {
+		return votes;
+	}
+
+	public void setVotes(Integer votes) {
+		this.votes = votes;
+	}
+
+	@Override
+	public String toString() {
+		return "Candidate [candidateId=" + candidateId + ", candidateName=" + candidateName + ", party=" + party
+				+ ", votes=" + votes + "]";
+	}
+
+}
